@@ -1,90 +1,124 @@
 <template>
-    <div>
-        <body>
-  <header>
-    <h1>Contact Us</h1>
-  </header>
-  
-  <section>
-    <form action="submit_form.php" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+  <div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+    <body>
 
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" required>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-</body>
-    </div>
+
+      <section class="contact-us">
+
+        <div class="flex-row">
+          <form method="post" class="flex-col">
+            <div class="headingh1">
+              <h1>Contact Us</h1>
+            </div>
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+
+          <img src="../assets/contact_us_clipart.jpg" />
+        </div>
+      </section>
+    </body>
+  </div>
 </template>
 
 <script>
 export default
-{
-    name:'ContactPage'
-}
+  {
+    name: 'ContactPage'
+  }
 </script>
 
 
 <style>
-  body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      /* background-color: pink; */
-      /* background-image: url('baac.jpg'); */
-    
-    }
 
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
+.contact-us .flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  width: 100%;
+}
 
-    section {
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color:white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
+.contact-us .flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+}
 
-    label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
+.contact-us .flex-row>* {
+  flex: 1;
+  width: 50%;
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      box-sizing: border-box;
-      border-radius:10px
-    }
 
-    button {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-    }
+.headingh1 {
+  text-align: center;
+}
 
-    button:hover {
-      background-color: #555;
-    }
+.contact-us {
+  margin: 20px auto;
+  padding: 20px 40px;
+  background-color: white;
+  box-shadow: 3px 3px 10px #ccc;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80vw;
+}
 
+.contact-us img {
+  height: 100%;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: medium;
+}
+
+.contact-us input,
+.contact-us textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(220, 223, 223);
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #555;
+}
 </style>
