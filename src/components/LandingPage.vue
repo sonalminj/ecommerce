@@ -1,19 +1,10 @@
 <template>
   <div class="landing-page">
-
     <img class="banner" src="../assets/home.webp" alt="Logo" />
     <div class="banner-text">
         <h1>Shop with us</h1>
         <p>Lorem ips elit. Ipsa, laudantium!</p>
     </div>
-
-    <section class="landing-page-section">
-      <h2>About Us</h2>
-    </section>
-    <section class="landing-page-section">
-      <h2>Contact Us</h2>
-    </section>
-
   </div>
 </template>
 
@@ -42,9 +33,8 @@ export default {
     color:black;
     padding:20px;
     font-size: 30px;
-
-
 }
+  
 .banner-text h1{
     font-size: 70px;
     text-transform:uppercase;

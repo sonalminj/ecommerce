@@ -83,7 +83,6 @@ export default
   background-color: white;
   box-shadow: 3px 3px 10px #ccc;
   border-radius: 10px;
-  font-family: Arial, Helvetica, sans-serif;
   width: 80vw;
 }
 

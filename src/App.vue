@@ -25,6 +25,11 @@ export default {
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #app {
   width: 100%;
 }
