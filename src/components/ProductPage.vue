@@ -2,21 +2,21 @@
   <div class="products-page">
     <h1 class="text-center">Our Products</h1>
 
-    <p v-if="loading" >Loading...</p>
+    <p v-if="store.loading">Loading...</p>
 
-    <p v-if="error">Failed to fetch</p>
+    <p v-if="store.error">Error occured while fetching data</p>
     <div class="products-container">
 
-      <div class="card full-width" v-for="product in products" :key="product.id">
+      <div class="single-product card full-width" v-for="product in store.products" :key="product.id">
         <img :src="product.image" />
         <div class="product-detail">
           <span class="product-title">{{ product.title }}</span>
           <span class="product-category">{{ product.category }}</span>
-          <span class="product-price">{{ "₹ " + (product.price * 82).toFixed(2) }}</span>
+          <span class="product-price">{{ "₹ " + (product.price * 80).toFixed(2) }}</span>
         </div>
-        <router-link :to="`/buy?id=${product.id}`">
-          <button class="buy">Order Now</button>
-        </router-link>
+        <div class="flex-row">
+          <button class="buy" @click="store.addToCart(product.id)">Add to Cart</button>
+        </div>
       </div>
     </div>
 
@@ -25,44 +25,37 @@
 
 
 <script>
-import axios from 'axios';
-import { AtomSpinner } from 'epic-spinners';
+import { store } from '@/store/global';
 
 export default {
   data() {
     return {
-      products: [],
-      loading: true,
-      error: false,
+      store,
     }
   },
 
-  async created() {
-    this.loading = true
-    this.error = false;
-    try {
-      const res = await axios.get('https://fakestoreapi.com/products');
-      this.products = res.data;
-    } catch (err) {
-      console.error(err);
-      this.error = true
-    }
-    this.loading = false
-  },
   methods: {
     goToProductDetail(productId) {
       this.$router.push({ name: 'ProductDetail', params: { id: productId } });
     },
   },
-  components: [AtomSpinner]
-
-
 };
-
 </script>
 
 
 <style>
+.flex-row {
+  display: flex;
+}
+
+.products-container .flex-row {
+  gap: 10px;
+}
+
+.products-container .flex-row>* {
+  flex: 1;
+}
+
 .products-page {
   margin: 50px 0;
   width: 100%;
@@ -75,8 +68,9 @@ export default {
 
 .products-container {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  row-gap: 20px;
+  column-gap: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   margin: 40px;
 }
 
@@ -122,5 +116,15 @@ export default {
 
 .buy {
   width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .products-container {
+    margin: 40px 0;
+  }
+  .single-product {
+    max-width: 250px;
+    margin: 0 auto;
+  }
 }
 </style>
