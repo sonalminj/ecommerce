@@ -120,4 +120,13 @@ button {
 button:hover {
   background-color: #555;
 }
+
+@media screen and (max-width: 700px) {
+  .contact-us img {
+    display: none;
+  }
+  .contact-us {
+    box-shadow: none;
+  }
+}
 </style>

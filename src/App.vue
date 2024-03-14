@@ -11,9 +11,13 @@
 <script>
 import MainNavigation from './components/MainNavigation.vue'
 import MainFooter from './components/MainFooter.vue'
+import { store } from './store/global';
 
 export default {
   name: 'App',
+  created() {
+    store.fetchProducts();
+  },
   components: {
     MainNavigation, MainFooter
   }
@@ -31,6 +35,6 @@ body {
 }
 
 #app {
-  width: 100%;
+  min-width: fit-content;
 }
 </style>

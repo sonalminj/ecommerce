@@ -1,46 +1,47 @@
 <template>
 
-  <div class="heading">
-    <h1>About Us</h1>
-    <!-- <div><img src="../assets/banner.webp" alt=""></div>
+  <div class="about-us-container">
+    <div class="heading">
+      <h1>About Us</h1>
+      <!-- <div><img src="../assets/banner.webp" alt=""></div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nulla incidunt molestiae modi neque possimus exercitationem voluptates porro, nostrum maxime fugiat sapiente placeat numquam commodi odit? Tempora deserunt vitae quis assumenda modi eveniet animi, saepe minima inventore soluta pariatur deleniti magnam amet autem facere.</p> -->
-    <!-- <p>Lorem ipsum dolor sit, amet consectetur.</p> -->
-  </div>
-  <section class='about-us'>
-    <img src="../assets/team.jpg">
-    <div class="content">
-      <h2>Lorem ipsum, dolor </h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-        minus, amet consectetur adipisicing elit. Soluta, nesciunt voluptatibus. Illum aperiam suscipit harum, nulla
-        fugit quidem ad tempore quisquam adipisci quo qui neque sunt consequatur enim voluptate laboriosam nostrum
-        voluptatibus debitis quibusdam, veritatis tenetur placeat nisi, ullam dolorem? Officiis reiciendis provident
-        repudiandae facilis incidunt ipsa itaque ratione est eaque ipsam? Quo, aut deserunt.
-      </p>
-      <button class="read-more-btn">Read More</button>
+      <!-- <p>Lorem ipsum dolor sit, amet consectetur.</p> -->
     </div>
+    <section class='about-us'>
+      <img src="../assets/team.jpg">
+      <div class="content">
+        <h2>Lorem ipsum, dolor </h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+          minus, amet consectetur adipisicing elit. Soluta, nesciunt voluptatibus. Illum aperiam suscipit harum, nulla
+          fugit quidem ad tempore quisquam adipisci quo qui neque sunt consequatur enim voluptate laboriosam nostrum
+          voluptatibus debitis quibusdam, veritatis tenetur placeat nisi, ullam dolorem? Officiis reiciendis provident
+          repudiandae facilis incidunt ipsa itaque ratione est eaque ipsam? Quo, aut deserunt.
+        </p>
+        <button class="read-more-btn">Read More</button>
+      </div>
 
 
 
-  </section>
+    </section>
 
-  <!-- ......
+    <!-- ......
     -->
 
-  <section class='about-us1'>
+    <section class='about-us1'>
 
-    <div class="content1">
-      <h2>Lorem ipsum, dolor </h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-        minus, amet consectetur adipisicing elit. Soluta, nesciunt voluptatibus. Illum aperiam suscipit harum, nulla
-        fugit quidem ad tempore quisquam adipisci quo qui neque sunt consequatur enim voluptate laboriosam nostrum
-        voluptatibus debitis quibusdam, veritatis tenetur placeat nisi, ullam dolorem? Officiis reiciendis provident
-        repudiandae facilis incidunt ipsa itaque ratione est eaque ipsam? Quo, aut deserunt.
-      </p>
-      <button class="read-more-btn1">Read More</button>
-    </div>
-    <img src="../assets/team1.webp">
-  </section>
-
+      <div class="content1">
+        <h2>Lorem ipsum, dolor </h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+          minus, amet consectetur adipisicing elit. Soluta, nesciunt voluptatibus. Illum aperiam suscipit harum, nulla
+          fugit quidem ad tempore quisquam adipisci quo qui neque sunt consequatur enim voluptate laboriosam nostrum
+          voluptatibus debitis quibusdam, veritatis tenetur placeat nisi, ullam dolorem? Officiis reiciendis provident
+          repudiandae facilis incidunt ipsa itaque ratione est eaque ipsam? Quo, aut deserunt.
+        </p>
+        <button class="read-more-btn1">Read More</button>
+      </div>
+      <img src="../assets/team1.webp">
+    </section>
+  </div>
 </template>
 <script>
 export default {
@@ -49,6 +50,10 @@ export default {
 }
 </script>
 <style>
+.about-us-container {
+  padding: 50px;
+}
+
 
 
 .heading {
@@ -140,7 +145,7 @@ export default {
 
 .about-us1 {
   display: flex;
-  width: 85%;
+  width: 100%;
 }
 
 .about-us1 img {
@@ -149,7 +154,7 @@ export default {
   height: auto;
   border-radius: 5px;
   margin-top: 100px;
- 
+
 }
 
 
